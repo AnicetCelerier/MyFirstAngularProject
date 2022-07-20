@@ -10,10 +10,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatBadgeModule } from '@angular/material/badge';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'; //this to use ngModule
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TodosComponent } from './components/todos/todos.component'; //this to use ngModule
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ButtonComponent],
+  declarations: [AppComponent, HomeComponent, ButtonComponent, TodosComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
