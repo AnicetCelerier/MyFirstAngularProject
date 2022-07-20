@@ -1,4 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { CalculatorService } from 'src/app/prodivers/calculator/calculator.service';
+
+class A {
+  a: string = 'toto';
+  // b: string
+  constructor(private b: string) {}
+
+  showB() {
+    console.log(this.b);
+  }
+}
+
+const a = new A('jordan');
+a.showB();
 
 @Component({
   selector: 'app-home',
@@ -9,7 +23,7 @@ export class HomeComponent implements OnInit {
   _name: string = 'Jordan';
   _myclass: string = '';
 
-  constructor() {}
+  constructor(private calculator: CalculatorService) {}
 
   ngOnInit(): void {
     setTimeout(() => {
@@ -18,10 +32,6 @@ export class HomeComponent implements OnInit {
   }
 
   handleClick(event: any) {
-    console.log(
-      '🚀 ~ file: home.component.ts ~ line 20 ~ HomeComponent ~ handleClick ~ event',
-      event
-    );
-    alert('Tu as cliqué!!');
+    console.log(this.calculator.addition(1, 2));
   }
 }
