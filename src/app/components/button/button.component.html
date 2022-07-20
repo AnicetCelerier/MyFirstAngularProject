@@ -1,3 +1,8 @@
-<button [ngClass]="'preset-' + preset" (click)="sendOnClick()">
+<button
+  [ngClass]="'preset-' + preset"
+  (click)="sendOnClick()"
+  mat-button
+  color="warn"
+>
   button works!
 </button>

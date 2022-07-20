@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { CalculatorService } from 'src/app/prodivers/calculator/calculator.service';
 
 class A {
@@ -22,6 +23,7 @@ a.showB();
 export class HomeComponent implements OnInit {
   _name: string = 'Jordan';
   _myclass: string = '';
+  _firstName = new FormControl(null, [Validators.required, Validators.email]);
 
   constructor(private calculator: CalculatorService) {}
 
@@ -33,5 +35,9 @@ export class HomeComponent implements OnInit {
 
   handleClick(event: any) {
     console.log(this.calculator.addition(1, 2));
+  }
+
+  submit() {
+    console.log(this._firstName.value);
   }
 }
