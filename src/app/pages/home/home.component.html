@@ -1,0 +1,6 @@
+<div>
+  <h1>Hello {{ _name }}</h1>
+  <p *ngIf="_name === 'Anicet'">grand et beau</p>
+  <app-button preset="blue" (onClick)="handleClick($event)"></app-button>
+  <p class="" [ngClass]="_myclass">My-class</p>
+</div>
