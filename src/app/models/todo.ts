@@ -1,4 +1,4 @@
-export class todo {
+export type Todo = {
   content?: string;
   completed?: boolean;
-}
+};

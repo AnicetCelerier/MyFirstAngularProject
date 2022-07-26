@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { todo } from '../../models/todo';
+import { Todo } from '../../models/todo';
 import { TodoService } from 'src/app/prodivers/todo/todo.service';
 
 @Component({
@@ -8,11 +8,11 @@ import { TodoService } from 'src/app/prodivers/todo/todo.service';
   styleUrls: ['./todos.component.scss'],
 })
 export class TodosComponent implements OnInit {
-  todos: todo[];
-  i: number;
+  todos: Todo[] = [];
+  // i: number;
   constructor(private todo: TodoService) {
     this.todos = [];
-    this.i = id;
+    // this.i = id;
   }
 
   ngOnInit(): void {
@@ -29,10 +29,10 @@ export class TodosComponent implements OnInit {
   }
 
   onToggle(): void {
-    this.todo.toggleDone();
+    // this.todo.toggleDone();
   }
 
   onDelete(): void {
-    this.todo.deleteTodo();
+    // this.todo.deleteTodo();
   }
 }
